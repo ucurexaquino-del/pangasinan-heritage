@@ -11,7 +11,7 @@ import {
 
 const BASE_PATH =
   process.env.NODE_ENV === "production"
-    ? "/pangasinan-heritage-main"
+    ? "/pangasinan-heritage"
     : "";
 
 
