@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
   basePath:
     process.env.NODE_ENV === "production"
-      ? "/pangasinan-heritage-main"
+      ? "/pangasinan-heritage"
       : "",
 
   assetPrefix:
