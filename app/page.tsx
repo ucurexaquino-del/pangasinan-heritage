@@ -9,10 +9,7 @@ import {
 
 
 
-const BASE_PATH =
-  process.env.NODE_ENV === "production"
-    ? "/pangasinan-heritage"
-    : "";
+const BASE_PATH = "/pangasinan-heritage";
 
 
 // --- Types & Data ---
