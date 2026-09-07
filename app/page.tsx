@@ -7,6 +7,14 @@ import {
   Check, Signal, Landmark 
 } from 'lucide-react';
 
+
+
+const BASE_PATH =
+  process.env.NODE_ENV === "production"
+    ? "/pangasinan-heritage-main"
+    : "";
+
+
 // --- Types & Data ---
 
 type Place = { 
@@ -25,21 +33,21 @@ type Place = {
 const places: Place[] = [
   { 
     id: 'islands', title: 'Hundred Islands', town: 'Alaminos City', category: 'Island escapes', 
-    image: '/images/hundred.jpg', intro: 'A little island. A whole new perspective.', 
+    image: `${BASE_PATH}/images/hundred.jpg`, intro: 'A little island. A whole new perspective.', 
     story: 'Discover the island-dotted waters of the Hundred Islands National Park in Alaminos. Limestone formations, quiet coves and sea views make this a distinctive part of Pangasinan’s natural heritage.', 
     tips: ['Arrange your visit through the local tourism office at Lucap.', 'Bring drinking water, sun protection and a reusable bag.', 'Follow your boat operator’s safety instructions and leave marine life undisturbed.'], 
     source: 'https://www.pangasinan.gov.ph/city-municipalities/alaminos-city/', label: 'Sea & discovery' 
   },
   { 
     id: 'lighthouse', title: 'Cape Bolinao Lighthouse', town: 'Bolinao', category: 'Heritage trails', 
-    image: '/images/light.jpg', intro: 'Follow the coast. Find a story.', 
+    image: `${BASE_PATH}/images/light.jpg`, intro: 'Follow the coast. Find a story.', 
     story: 'Above the coast of Patar, Cape Bolinao Lighthouse connects the landscape with the province’s maritime story. Take time to appreciate the landmark and the coastal communities around it.', 
     tips: ['Confirm current access with the local tourism office.', 'Bring sun protection for the exposed grounds.', 'Respect barriers and signs; tower access should not be assumed.'], 
     source: 'https://bolinaopangasinan.gov.ph/services/tourism-3/', label: 'History & horizons' 
   },
   { 
     id: 'springs', title: 'Balungao Hot Springs', town: 'Balungao', category: 'Nature retreats', 
-    image: '/images/spring.jpg', intro: 'Slow days, warm waters, greener views.', 
+    image: `${BASE_PATH}/images/spring.jpg`, intro: 'Slow days, warm waters, greener views.', 
     story: 'At the foot of Mount Balungao, hot and cold springs offer a different side of Pangasinan. Trade the coastline for an inland landscape and discover the town’s connection to its mountain and local traditions.', 
     tips: ['Check operating hours and facilities directly before traveling.', 'Bring swimwear, a towel and a change of clothes.', 'Follow posted pool guidance and keep the surroundings clean.'], 
     source: 'https://www.balungao.gov.ph/?page_id=595', label: 'Nature & renewal' 
